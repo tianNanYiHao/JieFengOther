@@ -10,6 +10,11 @@
      "imageName": "tabbar_message_center"
  },
  {
+     "vcName": "NulViewController",
+     "title": "",
+     "imageName": "tabbar_compose_icon_add"
+ },
+ {
      "vcName": "DiscoverTableViewController",
      "title": "广场",
      "imageName": "tabbar_discover"

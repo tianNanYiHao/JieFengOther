@@ -9,12 +9,52 @@
 import UIKit
 
 class MainViewController: UITabBarController {
-
+    
+    //MARK: - 懒加载
+    private lazy var composBtn:UIButton = {
+        let btn = UIButton.init(type: UIButtonType.custom)
+        btn.setImage(UIImage.init(named: "tabbar_compose_icon_add"), for: UIControlState.normal)
+        btn.setImage(UIImage.init(named: "tabbar_compose_icon_add_highlighted"), for: UIControlState.highlighted)
+        btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button"), for: UIControlState.normal)
+        btn.setBackgroundImage(UIImage.init(named: "tabbar_compose_button_highlighted"), for: UIControlState.highlighted)
+        btn.addTarget(self, action: #selector(compoesBtnClick), for: UIControlEvents.touchUpInside)
+        return btn
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置当前控制器的颜色为原色
         tabBar.tintColor = UIColor.orange
         
+        //1.动态创建子控制器
+        addCompos()
+        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setUpComposBtn()
+    }
+    
+    //MARK: - 设置中间按钮  
+    //注意:简体按钮事件的方法 不能是私有方法,这个方式是UIApplication 发送过来的
+    //按钮的点击事件 是由 运行循环(RunLoop) 监听  并且以 消息机制 发送的 , 所以监听方法不能是私有的
+    private func setUpComposBtn()->(){
+        tabBar.addSubview(composBtn)
+        let width = UIScreen.main.bounds.width/CGFloat(viewControllers!.count)
+        let x = width*2
+        composBtn.frame = CGRect.init(origin: .init(x: x, y: 0), size: CGSize.init(width: width, height: 49))
+        
+    }
+    
+    //MARK:- 监听按钮事件
+    func compoesBtnClick(){
+        print(#function)
+    }
+    
+    
+    //MARKL - 动态创建子控制器
+    private func addCompos()->(){
         
         //1获取字典
         let path =  Bundle.main.path(forResource: "MainVCSettings.json", ofType: nil)
@@ -37,10 +77,7 @@ class MainViewController: UITabBarController {
                 print(error)
             }
         }
-        
-        
     }
-
     
     //MARK: - 私有的封装方法 : 创建导航设置图片以及标题
     private func addChildViewController(_ childControllerName: String , _ titleName:String , _ imageDefaule:String) {
