@@ -11,6 +11,7 @@
 		BFD64F181DD02EB500D0EDA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD64F171DD02EB500D0EDA0 /* Assets.xcassets */; };
 		BFD64F261DD02EB600D0EDA0 /* DSWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F251DD02EB600D0EDA0 /* DSWeiBoTests.swift */; };
 		BFD64F311DD02EB600D0EDA0 /* DSWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F301DD02EB600D0EDA0 /* DSWeiBoUITests.swift */; };
+		BFF8AED11DD1BB59001439E4 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */; };
 		BFFBA9C01DD0533300166892 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9BF1DD0533300166892 /* MainViewController.swift */; };
 		BFFBA9C21DD0535400166892 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9C11DD0535400166892 /* HomeTableViewController.swift */; };
 		BFFBA9C41DD0539800166892 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9C31DD0539800166892 /* DiscoverTableViewController.swift */; };
@@ -49,6 +50,7 @@
 		BFD64F2C1DD02EB600D0EDA0 /* DSWeiBoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSWeiBoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD64F301DD02EB600D0EDA0 /* DSWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSWeiBoUITests.swift; sourceTree = "<group>"; };
 		BFD64F321DD02EB600D0EDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
 		BFFBA9BF1DD0533300166892 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BFFBA9C11DD0535400166892 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BFFBA9C31DD0539800166892 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = DSWeiBoUITests;
 			sourceTree = "<group>";
 		};
+		BFF8AECF1DD1BB4E001439E4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		BFFBA9B71DD0524300166892 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +202,7 @@
 		BFFBA9BD1DD0528D00166892 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				BFF8AECF1DD1BB4E001439E4 /* Resource */,
 				BFFBA9BF1DD0533300166892 /* MainViewController.swift */,
 			);
 			path = Main;
@@ -315,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFFBA9DA1DD0564300166892 /* Default@2x.png in Resources */,
+				BFF8AED11DD1BB59001439E4 /* MainVCSettings.json in Resources */,
 				BFD64F181DD02EB500D0EDA0 /* Assets.xcassets in Resources */,
 				BFFBA9D91DD0564300166892 /* Default.png in Resources */,
 				BFFBA9D81DD0564300166892 /* Default-568h@2x.png in Resources */,
