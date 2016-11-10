@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BF5CC1811DD2F72400F8EBD6 /* NulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1801DD2F72400F8EBD6 /* NulViewController.swift */; };
+		BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */; };
+		BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */; };
 		BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F101DD02EB500D0EDA0 /* AppDelegate.swift */; };
 		BFD64F181DD02EB500D0EDA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD64F171DD02EB500D0EDA0 /* Assets.xcassets */; };
 		BFD64F261DD02EB600D0EDA0 /* DSWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F251DD02EB600D0EDA0 /* DSWeiBoTests.swift */; };
@@ -42,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		BF5CC1801DD2F72400F8EBD6 /* NulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NulViewController.swift; sourceTree = "<group>"; };
+		BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNLoginView.swift; sourceTree = "<group>"; };
 		BFD64F0D1DD02EB500D0EDA0 /* DSWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD64F101DD02EB500D0EDA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFD64F171DD02EB500D0EDA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 			children = (
 				BFF8AECF1DD1BB4E001439E4 /* Resource */,
 				BFFBA9BF1DD0533300166892 /* MainViewController.swift */,
+				BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */,
+				BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -359,8 +365,10 @@
 			files = (
 				BFFBA9C81DD053C300166892 /* ProfileTableViewController.swift in Sources */,
 				BFFBA9C21DD0535400166892 /* HomeTableViewController.swift in Sources */,
+				BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */,
 				BFFBA9C01DD0533300166892 /* MainViewController.swift in Sources */,
 				BFFBA9C41DD0539800166892 /* DiscoverTableViewController.swift in Sources */,
+				BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */,
 				BFFBA9C61DD053B000166892 /* MessageTableViewController.swift in Sources */,
 				BF5CC1811DD2F72400F8EBD6 /* NulViewController.swift in Sources */,
 				BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */,

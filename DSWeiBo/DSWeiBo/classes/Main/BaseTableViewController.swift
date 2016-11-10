@@ -1,15 +1,27 @@
 //
-//  HomeTableViewController.swift
+//  BaseTableViewController.swift
 //  DSWeiBo
 //
-//  Created by Lff on 16/11/7.
+//  Created by Lff on 16/11/9.
 //  Copyright © 2016年 Lff. All rights reserved.
 //
 
 import UIKit
 
-class HomeTableViewController: BaseTableViewController {
+class BaseTableViewController: UITableViewController {
 
+    let useLogin = false
+    override func loadView() {
+        useLogin ? super.loadView() : setUnUNLoginView()
+        
+    }
+    ///设置未登录界面
+    private func setUnUNLoginView()->(){
+        let customVIew = UNLoginView.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 300))
+        customVIew.backgroundColor = UIColor.red
+        view = customVIew
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
