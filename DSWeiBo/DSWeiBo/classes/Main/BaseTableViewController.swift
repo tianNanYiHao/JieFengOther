@@ -11,7 +11,7 @@ import UIKit
 class BaseTableViewController: UITableViewController {
 
     let useLogin = false
-    override func loadView() {
+    override func loadView() { 
         useLogin ? super.loadView() : setUnUNLoginView()
         
     }
@@ -23,6 +23,7 @@ class BaseTableViewController: UITableViewController {
         
     }
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
