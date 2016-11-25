@@ -97,9 +97,11 @@ class UNLoginView: UIView {
         
         
         
-        
+        //设置不同未登录界面
         func setuoUNloginView(isHome:Bool ,iconName:String , message:String){
             iconView.isHidden = !isHome
+            iconView.image = UIImage.init(named: iconName)
+            messageLab.text = message
             
         }
         
