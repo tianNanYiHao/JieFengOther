@@ -18,7 +18,7 @@ class BaseTableViewController: UITableViewController {
     ///设置未登录界面
     private func setUnUNLoginView()->(){
         let customVIew = UNLoginView.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 300))
-        customVIew.backgroundColor = UIColor.red
+        customVIew.backgroundColor = UIColor.white
         view = customVIew
         
     }

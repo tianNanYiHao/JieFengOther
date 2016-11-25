@@ -1,0 +1,6 @@
+framework module Pods_DSWeiBo {
+  umbrella header "Pods-DSWeiBo-umbrella.h"
+
+  export *
+  module * { export * }
+}
