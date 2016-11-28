@@ -26,10 +26,15 @@ class HomeTableViewController: BaseTableViewController {
     }
     
     private func setUpNav(){
-        //左边按钮
-        navigationItem.leftBarButtonItem = createBarItem(iconName: "navigationbar_friendattention" ,action: #selector(leftBtnClick))
-        navigationItem.rightBarButtonItem = createBarItem(iconName: "navigationbar_pop",action: #selector(rightBtnClick))
-           }
+            //左边按钮 //写法二 : 添加分类方法编写
+        //初始化左右按钮
+            navigationItem.leftBarButtonItem = UIBarButtonItem.createBarItem(iconName: "navigationbar_friendattention", action: #selector(leftBtnClick))
+            navigationItem.rightBarButtonItem = UIBarButtonItem.createBarItem(iconName: "navigationbar_pop", action: #selector(rightBtnClick))
+        //初始化标题按钮
+        
+       }
+   
+    
     private func createBarItem(iconName:String , action : Selector)->UIBarButtonItem{
         let Btn = UIButton()
         Btn.setImage(UIImage.init(named: iconName), for: .normal)

@@ -10,7 +10,7 @@ import UIKit
 
 class BaseTableViewController: UITableViewController,UNLoginVIewDelegate {
 
-    var useLogin = false
+    var useLogin = true
     //定义一个属性 保存未登录界面
     var unloginView:UNLoginView?
     
