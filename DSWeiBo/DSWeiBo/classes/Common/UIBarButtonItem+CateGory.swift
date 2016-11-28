@@ -17,12 +17,12 @@ extension UIBarButtonItem{
     /// - parameter iconName: 导航条图片名
     /// - parameter action:   导航条时间监听
     ///
-    /// - returns: <#return value description#>
-    class func createBarItem(iconName:String , action : Selector)->UIBarButtonItem {
+    /// - returns: 返回barButtonItem
+    class func createBarItem(iconName:String ,target :AnyObject? , action : Selector)->UIBarButtonItem {
         let Btn = UIButton()
         Btn.setImage(UIImage.init(named: iconName), for: .normal)
         Btn.setImage(UIImage.init(named: iconName+"_highlighted"), for: .highlighted)
-        Btn.addTarget(self, action: action, for: .touchUpInside)
+        Btn.addTarget(target, action: action, for: .touchUpInside)
         Btn.sizeToFit()
         return UIBarButtonItem.init(customView: Btn)
     }

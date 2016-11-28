@@ -10,7 +10,7 @@
      "imageName": "tabbar_message_center"
  },
  {
-     "vcName": "NulViewController",
+     "vcName": "NullViewController",
      "title": "",
      "imageName": "tabbar_compose_icon_add"
  },

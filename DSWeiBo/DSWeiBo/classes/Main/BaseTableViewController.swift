@@ -34,12 +34,12 @@ class BaseTableViewController: UITableViewController,UNLoginVIewDelegate {
         
     }
     
-    //MARK: - UNLoginViewDelegate
+    //MARK: - UNLoginViewDelegate代理
     func registerBtnClickerDeleg() {
-        
+        print(#function)
     }
     func loginBtnClickDeleg() {
-          
+        print(#function)
     }
     
     

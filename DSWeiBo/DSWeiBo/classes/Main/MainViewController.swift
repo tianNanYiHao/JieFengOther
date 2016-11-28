@@ -86,6 +86,7 @@ class MainViewController: UITabBarController {
         //1 根据字符串创建类
         let className:AnyClass? = NSClassFromString(productName+"."+childControllerName)
         print(className)
+        
         //2 绑定类的类型为 UIViewController  (将AnyClass 转换位 指定的类型)
         let classCtr = className as! UIViewController.Type
         //3 根据自定义的类 来创建对象

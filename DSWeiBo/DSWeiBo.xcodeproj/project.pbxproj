@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BDA9CAA880E439F128C1C1A2 /* Pods_DSWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE75887518DA4605BF7DBBA /* Pods_DSWeiBo.framework */; };
 		BF3C687D1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C687C1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift */; };
+		BF3C687F1DEC1E1C00E3C31C /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C687E1DEC1E1C00E3C31C /* NullViewController.swift */; };
 		BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */; };
 		BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */; };
 		BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F101DD02EB500D0EDA0 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		9B976ECC2A1387E1146B8740 /* Pods-DSWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSWeiBo/Pods-DSWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9BE75887518DA4605BF7DBBA /* Pods_DSWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3C687C1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CateGory.swift"; sourceTree = "<group>"; };
+		BF3C687E1DEC1E1C00E3C31C /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
 		BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNLoginView.swift; sourceTree = "<group>"; };
 		BFD64F0D1DD02EB500D0EDA0 /* DSWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */,
+				BF3C687E1DEC1E1C00E3C31C /* NullViewController.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */,
 				BFFBA9C01DD0533300166892 /* MainViewController.swift in Sources */,
 				BFFBA9C41DD0539800166892 /* DiscoverTableViewController.swift in Sources */,
+				BF3C687F1DEC1E1C00E3C31C /* NullViewController.swift in Sources */,
 				BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */,
 				BFFBA9C61DD053B000166892 /* MessageTableViewController.swift in Sources */,
 				BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */,
