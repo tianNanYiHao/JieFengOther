@@ -10,8 +10,36 @@ import UIKit
 import SnapKit
 
 
-class UNLoginView: UIView {
+//在swift中 设置代理 必须遵守NSObjectProtocol协议
+protocol UNLoginVIewDelegate : NSObjectProtocol{
+    //登录的回调
+    func loginBtnClickDeleg()
+    //注册的回调
+    func registerBtnClickerDeleg()
+}
 
+
+class UNLoginView: UIView {
+    
+    
+    //定义delegate属性 (为防止循环引用 一定要写上weak 修饰)
+    weak var delegate : UNLoginVIewDelegate?
+    
+
+    //MARK: - 内部控制方法
+    private func statrAnimation(){
+        //1.创建动画
+        let animation = CABasicAnimation.init(keyPath: "transform.rotation")
+        //2.设置动画
+        animation.toValue = 2*M_PI
+        animation.duration = 20
+        animation.repeatCount = MAXFLOAT
+        animation.isRemovedOnCompletion = false
+        //3.添加动画到layer
+        iconView.layer.add(animation, forKey: nil)
+    }
+    
+    
     //MARK: - 懒加载控件
     /// 转盘
     private lazy var iconView : UIImageView = {
@@ -35,7 +63,7 @@ class UNLoginView: UIView {
         lb.text = "的说法范萨范德德萨范德德萨范德德萨范德德萨范德萨"
         lb.numberOfLines = 0
         lb.textAlignment = NSTextAlignment.center
-        lb.textColor = UIColor.darkGray
+        lb.textColor = UIColor.lightGray
         return lb
     }()
     /// 登录按钮
@@ -44,6 +72,7 @@ class UNLoginView: UIView {
         btn.setTitle("登陆", for: UIControlState.normal)
         btn.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
         btn.setBackgroundImage(UIImage.init(named: "common_button_white_disable"), for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(loginBtnClick), for: UIControlEvents.touchUpInside)
         return btn
     }()
     /// 注册按钮
@@ -52,6 +81,7 @@ class UNLoginView: UIView {
         btn.setTitle("注册", for: UIControlState.normal)
         btn.setTitleColor(UIColor.orange, for: .normal)
         btn.setBackgroundImage(UIImage.init(named: "common_button_white_disable"), for: UIControlState.normal)
+        btn.addTarget(self, action: #selector(registerBtnClicker), for: UIControlEvents.touchUpInside)
         return btn
     }()
     
@@ -94,19 +124,36 @@ class UNLoginView: UIView {
             make.top.equalTo(messageLab.snp.bottom).offset(10)
             make.size.equalTo(CGSize.init(width: 100, height: 30))
         }
-        
-        
-        
-        //设置不同未登录界面
-        func setuoUNloginView(isHome:Bool ,iconName:String , message:String){
-            iconView.isHidden = !isHome
-            iconView.image = UIImage.init(named: iconName)
-            messageLab.text = message
-            
-        }
-        
-        
     }
+    
+    
+    /// 设置未登录界面
+    /// - parameter isHome:   是否是首页
+    /// - parameter iconName: 需要展示的图标名称
+    /// - parameter message:  tip信息
+    func setupUNloginView(isHome:Bool ,iconName:String , message:String){
+        iconView.isHidden = !isHome
+        homeIcon.image = UIImage.init(named: iconName)
+        messageLab.text = message
+        //判断是否需要执行动画
+        if isHome{
+         statrAnimation()
+        }
+    }
+    
+    /// 注册按钮方法
+    func registerBtnClicker(){
+        delegate?.registerBtnClickerDeleg()
+    }
+    
+    /// 登录按钮方法
+    func loginBtnClick(){
+        delegate?.loginBtnClickDeleg()
+    }
+    
+    
+    
+    
     
     
     

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		BDA9CAA880E439F128C1C1A2 /* Pods_DSWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE75887518DA4605BF7DBBA /* Pods_DSWeiBo.framework */; };
-		BF5CC1811DD2F72400F8EBD6 /* NulViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1801DD2F72400F8EBD6 /* NulViewController.swift */; };
 		BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */; };
 		BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */; };
 		BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F101DD02EB500D0EDA0 /* AppDelegate.swift */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		9B976ECC2A1387E1146B8740 /* Pods-DSWeiBo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSWeiBo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DSWeiBo/Pods-DSWeiBo.debug.xcconfig"; sourceTree = "<group>"; };
 		9BE75887518DA4605BF7DBBA /* Pods_DSWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF5CC1801DD2F72400F8EBD6 /* NulViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NulViewController.swift; sourceTree = "<group>"; };
 		BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNLoginView.swift; sourceTree = "<group>"; };
 		BFD64F0D1DD02EB500D0EDA0 /* DSWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,7 +161,6 @@
 			isa = PBXGroup;
 			children = (
 				BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */,
-				BF5CC1801DD2F72400F8EBD6 /* NulViewController.swift */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -434,7 +431,6 @@
 				BFFBA9C41DD0539800166892 /* DiscoverTableViewController.swift in Sources */,
 				BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */,
 				BFFBA9C61DD053B000166892 /* MessageTableViewController.swift in Sources */,
-				BF5CC1811DD2F72400F8EBD6 /* NulViewController.swift in Sources */,
 				BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

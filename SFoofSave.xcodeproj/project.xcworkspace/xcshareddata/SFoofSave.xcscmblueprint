@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "97A4E2ED185AA33781AE4CD6D302A43001697ECB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "97A4E2ED185AA33781AE4CD6D302A43001697ECB" : 0,
+    "A5155C320A174F221B9725A0F598DB4F55AF0E1D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B6362F94-7487-408D-8A76-6618E17037DB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "97A4E2ED185AA33781AE4CD6D302A43001697ECB" : "SFoodSaveApp%20%E5%A4%96%E7%89%88\/",
+    "A5155C320A174F221B9725A0F598DB4F55AF0E1D" : "SFoodSaveApp\/SFoofSave\/3rd\/RXLSideSlip\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SFoofSave",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SFoofSave.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/tianNanYiHao\/SFoodSaveApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "97A4E2ED185AA33781AE4CD6D302A43001697ECB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dangxiaoyin\/RXLSideSlip.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A5155C320A174F221B9725A0F598DB4F55AF0E1D"
+    }
+  ]
+}

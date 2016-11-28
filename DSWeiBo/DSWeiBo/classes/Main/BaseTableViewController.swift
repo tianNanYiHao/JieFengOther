@@ -8,20 +8,41 @@
 
 import UIKit
 
-class BaseTableViewController: UITableViewController {
+class BaseTableViewController: UITableViewController,UNLoginVIewDelegate {
 
-    let useLogin = false
+    var useLogin = false
+    //定义一个属性 保存未登录界面
+    var unloginView:UNLoginView?
+    
     override func loadView() { 
         useLogin ? super.loadView() : setUnUNLoginView()
         
     }
     ///设置未登录界面
     private func setUnUNLoginView()->(){
+        //1.初始化未登录界面
         let customVIew = UNLoginView.init(frame: CGRect.init(x: 0, y: 0, width: 300, height: 300))
         customVIew.backgroundColor = UIColor.white
+        customVIew.delegate = self
         view = customVIew
+        unloginView = customVIew
+        
+        //2.设置导航条未登录按钮
+//        navigationController?.navigationBar.tintColor = UIColor.orange
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "注册", style: .plain, target: self, action: #selector(registerBtnClickerDeleg))
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(title: "登录", style: .plain, target: self, action: #selector(loginBtnClickDeleg))
         
     }
+    
+    //MARK: - UNLoginViewDelegate
+    func registerBtnClickerDeleg() {
+        
+    }
+    func loginBtnClickDeleg() {
+          
+    }
+    
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()

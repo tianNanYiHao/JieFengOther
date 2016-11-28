@@ -24,7 +24,7 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置当前控制器的颜色为原色
-        tabBar.tintColor = UIColor.orange
+//        tabBar.tintColor = UIColor.orange
         
         //1.动态创建子控制器
         addCompos()
