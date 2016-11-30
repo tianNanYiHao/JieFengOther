@@ -10,6 +10,7 @@
 		BDA9CAA880E439F128C1C1A2 /* Pods_DSWeiBo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE75887518DA4605BF7DBBA /* Pods_DSWeiBo.framework */; };
 		BF3C687D1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C687C1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift */; };
 		BF3C687F1DEC1E1C00E3C31C /* NullViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C687E1DEC1E1C00E3C31C /* NullViewController.swift */; };
+		BF3C68811DEC27F800E3C31C /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3C68801DEC27F800E3C31C /* TitleButton.swift */; };
 		BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */; };
 		BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */; };
 		BFD64F111DD02EB500D0EDA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F101DD02EB500D0EDA0 /* AppDelegate.swift */; };
@@ -17,11 +18,14 @@
 		BFD64F261DD02EB600D0EDA0 /* DSWeiBoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F251DD02EB600D0EDA0 /* DSWeiBoTests.swift */; };
 		BFD64F311DD02EB600D0EDA0 /* DSWeiBoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFD64F301DD02EB600D0EDA0 /* DSWeiBoUITests.swift */; };
 		BFF8AED11DD1BB59001439E4 /* MainVCSettings.json in Resources */ = {isa = PBXBuildFile; fileRef = BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */; };
+		BFFA83B01DED56820058093C /* PopoverViewControllers.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFFA83AF1DED56810058093C /* PopoverViewControllers.storyboard */; };
+		BFFA83B21DED5C320058093C /* PopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFA83B11DED5C320058093C /* PopoverPresentationController.swift */; };
 		BFFBA9C01DD0533300166892 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9BF1DD0533300166892 /* MainViewController.swift */; };
 		BFFBA9C21DD0535400166892 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9C11DD0535400166892 /* HomeTableViewController.swift */; };
 		BFFBA9C41DD0539800166892 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9C31DD0539800166892 /* DiscoverTableViewController.swift */; };
 		BFFBA9C61DD053B000166892 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9C51DD053B000166892 /* MessageTableViewController.swift */; };
 		BFFBA9C81DD053C300166892 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBA9C71DD053C300166892 /* ProfileTableViewController.swift */; };
+		BFFD39DE1DEE9F2C00F119CC /* PopoverAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFD39DD1DEE9F2C00F119CC /* PopoverAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,7 @@
 		9BE75887518DA4605BF7DBBA /* Pods_DSWeiBo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DSWeiBo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3C687C1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+CateGory.swift"; sourceTree = "<group>"; };
 		BF3C687E1DEC1E1C00E3C31C /* NullViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NullViewController.swift; sourceTree = "<group>"; };
+		BF3C68801DEC27F800E3C31C /* TitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleButton.swift; sourceTree = "<group>"; };
 		BF5CC1821DD3056500F8EBD6 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		BF5CC1861DD3160300F8EBD6 /* UNLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UNLoginView.swift; sourceTree = "<group>"; };
 		BFD64F0D1DD02EB500D0EDA0 /* DSWeiBo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSWeiBo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,11 +64,14 @@
 		BFD64F301DD02EB600D0EDA0 /* DSWeiBoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSWeiBoUITests.swift; sourceTree = "<group>"; };
 		BFD64F321DD02EB600D0EDA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF8AED01DD1BB59001439E4 /* MainVCSettings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = MainVCSettings.json; sourceTree = "<group>"; };
+		BFFA83AF1DED56810058093C /* PopoverViewControllers.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PopoverViewControllers.storyboard; sourceTree = "<group>"; };
+		BFFA83B11DED5C320058093C /* PopoverPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverPresentationController.swift; sourceTree = "<group>"; };
 		BFFBA9BF1DD0533300166892 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BFFBA9C11DD0535400166892 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BFFBA9C31DD0539800166892 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
 		BFFBA9C51DD053B000166892 /* MessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		BFFBA9C71DD053C300166892 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		BFFD39DD1DEE9F2C00F119CC /* PopoverAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverAnimator.swift; sourceTree = "<group>"; };
 		F2575AD87F1F3CB3087A4237 /* Pods-DSWeiBo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DSWeiBo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DSWeiBo/Pods-DSWeiBo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				BF3C687C1DEC141100E3C31C /* UIBarButtonItem+CateGory.swift */,
+				BF3C68801DEC27F800E3C31C /* TitleButton.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -178,6 +187,16 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		BFFA83AE1DED56450058093C /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				BFFA83AF1DED56810058093C /* PopoverViewControllers.storyboard */,
+				BFFA83B11DED5C320058093C /* PopoverPresentationController.swift */,
+				BFFD39DD1DEE9F2C00F119CC /* PopoverAnimator.swift */,
+			);
+			path = Popover;
+			sourceTree = "<group>";
+		};
 		BFFBA9B71DD0524300166892 /* classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +222,7 @@
 		BFFBA9B91DD0524300166892 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BFFA83AE1DED56450058093C /* Popover */,
 				BFFBA9C11DD0535400166892 /* HomeTableViewController.swift */,
 			);
 			path = Home;
@@ -357,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF8AED11DD1BB59001439E4 /* MainVCSettings.json in Resources */,
+				BFFA83B01DED56820058093C /* PopoverViewControllers.storyboard in Resources */,
 				BFD64F181DD02EB500D0EDA0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +455,10 @@
 				BFFBA9C21DD0535400166892 /* HomeTableViewController.swift in Sources */,
 				BF5CC1831DD3056500F8EBD6 /* BaseTableViewController.swift in Sources */,
 				BFFBA9C01DD0533300166892 /* MainViewController.swift in Sources */,
+				BF3C68811DEC27F800E3C31C /* TitleButton.swift in Sources */,
+				BFFA83B21DED5C320058093C /* PopoverPresentationController.swift in Sources */,
 				BFFBA9C41DD0539800166892 /* DiscoverTableViewController.swift in Sources */,
+				BFFD39DE1DEE9F2C00F119CC /* PopoverAnimator.swift in Sources */,
 				BF3C687F1DEC1E1C00E3C31C /* NullViewController.swift in Sources */,
 				BF5CC1871DD3160300F8EBD6 /* UNLoginView.swift in Sources */,
 				BFFBA9C61DD053B000166892 /* MessageTableViewController.swift in Sources */,
