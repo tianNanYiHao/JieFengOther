@@ -80,7 +80,9 @@ class HomeTableViewController: BaseTableViewController {
         print(#function)
     }
     func rightBtnClick() {
-        print(#function)
+        let sb = UIStoryboard.init(name: "QRcodeViewController", bundle: nil)
+        let pc = sb.instantiateInitialViewController()
+        present(pc!, animated: true, completion: nil)
     }
 
 }
