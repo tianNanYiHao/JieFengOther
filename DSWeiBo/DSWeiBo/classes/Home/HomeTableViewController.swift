@@ -23,7 +23,6 @@ class HomeTableViewController: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         //如果没有登录,就设置未登录界面
         if !useLogin
         {
@@ -73,7 +72,6 @@ class HomeTableViewController: BaseTableViewController {
         //2.2 设置转场样式 -> 自定义
         vc?.modalPresentationStyle = UIModalPresentationStyle.custom
         present(vc!, animated: true, completion: nil)
-        
     }
     
     func leftBtnClick() {

@@ -67,7 +67,6 @@ class QRcodeViewController: UIViewController,UITabBarDelegate {
         customTabbar.delegate = self
         //1.设置默认item选项
         customTabbar.selectedItem = customTabbar.items![0]
-        
     }
     
     
@@ -136,13 +135,16 @@ class QRcodeViewController: UIViewController,UITabBarDelegate {
 }
 
 extension QRcodeViewController:AVCaptureMetadataOutputObjectsDelegate{
-    
     //只要解析到数据,就会调用
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+        //1获取扫描到的数据
         guard let objc = metadataObjects.last as? AVMetadataMachineReadableCodeObject
             else {
                 return
         }
         print(objc.stringValue)
+        //2 获取二维码位置
+         print(objc.corners)
+        
     }
 }
