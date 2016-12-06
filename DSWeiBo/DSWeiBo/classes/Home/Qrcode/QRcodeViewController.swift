@@ -47,18 +47,26 @@ class QRcodeViewController: UIViewController,UITabBarDelegate {
     private lazy var deviceOutPut : AVCaptureMetadataOutput = AVCaptureMetadataOutput()
     
     ///预览图层
-    private lazy var previewLayer : AVCaptureVideoPreviewLayer = {
+    lazy var previewLayer : AVCaptureVideoPreviewLayer = {
         let layer = AVCaptureVideoPreviewLayer.init(session: self.session) // 闭包要访问外界数据  要self
         layer?.frame = UIScreen.main.bounds
         return layer!
     }()
     
+    ///绿框图层
+    lazy var drawlayer : CALayer = {
+        let lay = CALayer()
+        lay.frame =  UIScreen.main.bounds
+        return lay
+    }()
     
-    ///点击关闭
+    
+    
+    //点击关闭
     @IBAction func closeClick(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
-    ///点击相册
+    //点击相册
     @IBAction func photoAlbumClick(_ sender: AnyObject) {
     }
     
@@ -112,6 +120,8 @@ class QRcodeViewController: UIViewController,UITabBarDelegate {
         deviceOutPut.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
         //添加预览图层到底层
         view.layer.insertSublayer(previewLayer, at: 0)
+        //添加绿框到预览图层
+        previewLayer.addSublayer(drawlayer)
         //6.告诉session会话,开始扫描
         session.startRunning()
     }
@@ -131,20 +141,71 @@ class QRcodeViewController: UIViewController,UITabBarDelegate {
             animationScanLainView()
         }
     }
-
 }
 
 extension QRcodeViewController:AVCaptureMetadataOutputObjectsDelegate{
+    ///输出处理代理方法
     //只要解析到数据,就会调用
     func captureOutput(_ captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [Any]!, from connection: AVCaptureConnection!) {
+        //0. 先清除layer
+        clearCorners()
         //1获取扫描到的数据
-        guard let objc = metadataObjects.last as? AVMetadataMachineReadableCodeObject
-            else {
+        guard let obj = metadataObjects.last as? AVMetadataMachineReadableCodeObject
+            else{
                 return
         }
-        print(objc.stringValue)
         //2 获取二维码位置
-         print(objc.corners)
-        
+        //2.1 转换corners 坐标
+        let objCorners = previewLayer.transformedMetadataObject(for: obj)
+        //2.2 绘制图形绿框
+        drawCorners(objCorners: objCorners as! AVMetadataMachineReadableCodeObject)
     }
+    
+    
+    /// 绘制绿色框(Bethel曲线)
+    ///
+    /// - parameter objCorners: 保存了坐标的 AVMetadataMachineReadableCodeObject 对象
+    private func drawCorners(objCorners :AVMetadataMachineReadableCodeObject){
+        if objCorners.corners.isEmpty{
+            return
+        }
+        //1.新建layer
+        let layer = CAShapeLayer()
+        layer.lineWidth = 4
+        layer.strokeColor = UIColor.green.cgColor
+        layer.fillColor = UIColor.clear.cgColor
+        
+        //2.创建贝塞尔路径
+        let path = UIBezierPath()
+        var point = CGPoint.zero
+        var index : Int = 0
+        //2.1从corners数组中开始取point坐标
+        point = CGPoint.init(dictionaryRepresentation: objCorners.corners[0] as! CFDictionary)!
+        //2.2 移动到起始点
+        path.move(to: point)
+        while index < objCorners.corners.count{
+            point = CGPoint.init(dictionaryRepresentation: objCorners.corners[index] as! CFDictionary)!
+            index += 1
+            //2.3 点添加成路径线
+            path.addLine(to: point)
+        }
+        //2.4 关闭路径
+        path.close()
+        //2.5 绘制路径
+        layer.path = path.cgPath
+        //3.将创建好的layer添加到drawLayer上去
+        drawlayer.addSublayer(layer)
+    }
+    
+    private func  clearCorners(){
+        if drawlayer.sublayers?.count == 0 || drawlayer.sublayers == nil {
+            return
+        }
+        //移除所有子图层
+        for subLay in drawlayer.sublayers! {
+            subLay.removeFromSuperlayer()
+        }
+    }
+    
+    
 }
